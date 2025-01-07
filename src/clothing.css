@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background:#E3E6E6;
+    width: 100%;
+}
+.clothing-products
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    user-select: none;
+    margin-top: 3rem;
+}
+
+.clothing-product-card
+{
+    width: 300px;
+    background: #fff;
+    padding: 2rem;
+}
+
+.clothing-product-card h2,p
+{
+    color: black;   
+}
+
+.clothing-product-card:hover
+{
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.clothing-product-img
+{
+    height: 10rem;
+    width: 10rem;
+    background-color: transparent;
+    mix-blend-mode: multiply;
+}
