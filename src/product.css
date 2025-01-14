@@ -1,67 +1,130 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body
-{
-    background:#E3E6E6;
+body {
+    background: #E3E6E6;
 }
 
-.product
-{
-   display: flex;
-   border: 2px solid rgb(160, 160, 160);
-   margin-right: 30rem;
-   width: 100%;
-   padding: 3rem;
-   background: #fff;
-   border-radius: 2rem;
-   user-select: none;
-}
-
-.product-card
-{
+.product {
     display: flex;
-    width: 100rem;
+    flex-wrap: wrap; 
+    border: 2px solid rgb(160, 160, 160);
+    margin: 2rem auto;
+    width: 90%; 
+    max-width: 1200px; 
+    padding: 2rem;
+    background: #fff;
+    border-radius: 2rem;
+    user-select: none;
 }
 
-.product-img
-{
-    height: 30rem;
-    width: 21rem;
+.product-card {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 100%;
+}
+
+.product-img {
+    height: auto;
+    width: 100%;
+    max-width: 21rem; 
+    margin: auto;
     background-color: transparent;
     mix-blend-mode: multiply;
 }
 
-.product-details
-{
+.product-details {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 3rem;
+    flex: 1; 
 }
 
-.buttons
-{
+.buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 1rem;
 }
 
-.cart-button
-{
+.cart-button,
+.buy-button {
     width: 10rem;
     border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-button {
     background-color: #FFD814;
     margin-bottom: 1rem;
 }
 
-.buy-button
-{
-    width: 10rem;
-    border-radius: 2rem;
+.buy-button {
     background-color: #FF9900;
+}
+
+@media (max-width: 768px) {
+    .product {
+        padding: 1rem;
+    }
+
+    .product-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-img {
+        width: 100%; 
+        max-width: 18rem; 
+        margin-bottom: 1rem;
+    }
+
+    .product-details {
+        margin-left: 0; 
+        text-align: center; 
+    }
+
+    .buttons {
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 2rem; 
+    }
+
+    .cart-button,
+    .buy-button {
+        width: auto;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        padding: 2rem;
+        margin-top: 4rem;
+    }
+
+    .product-img {
+        width: 100%;
+        max-width: 15rem; 
+    }
+
+    .product-details {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .cart-button,
+    .buy-button {
+        width: 60%; 
+        padding: 0.5rem;
+    }
 }
